@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 720" role="img" aria-label="Imagem temporaria de colaborador">
+  <rect width="800" height="720" fill="#f1eadf"/>
+  <rect x="80" y="80" width="640" height="560" rx="26" fill="#fff"/>
+  <circle cx="400" cy="265" r="105" fill="#116149"/>
+  <rect x="220" y="420" width="360" height="34" rx="17" fill="#c28a32"/>
+  <rect x="265" y="485" width="270" height="24" rx="12" fill="#ded8cf"/>
+  <text x="400" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="800" fill="#fff">REC</text>
+</svg>

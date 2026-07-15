@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>REC NEGOCIOS | Rede de colaboradores e oportunidades</title>
+    <meta
+      name="description"
+      content="REC NEGOCIOS conecta pessoas, colaboradores e oportunidades em uma vitrine digital simples, direta e pronta para crescer."
+    />
+    <meta property="og:title" content="REC NEGOCIOS" />
+    <meta
+      property="og:description"
+      content="Conheca colaboradores, oportunidades e canais de contato da REC NEGOCIOS."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/og-rec-negocios.jpg" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="REC NEGOCIOS">
+        <span class="brand-mark">REC</span>
+        <span class="brand-text">NEGOCIOS</span>
+      </a>
+      <nav class="main-nav" aria-label="Menu principal">
+        <a href="#colaboradores">Colaboradores</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="header-action" href="#colaboradores">Ver telas</a>
+    </header>
+
+    <main id="inicio">
+      <section class="hero">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/img/hero-placeholder.svg" alt="" />
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Rede de negocios e colaboradores</p>
+          <h1>REC NEGOCIOS</h1>
+          <p>
+            Uma vitrine digital para apresentar parceiros, projetos e novas
+            oportunidades com paginas individuais que podem crescer junto com a rede.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#colaboradores">Explorar colaboradores</a>
+            <a class="button secondary" href="#contato">Falar com a REC</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip" aria-label="Destaques">
+        <article>
+          <strong>Vitrine central</strong>
+          <span>Todos os colaboradores organizados em um unico lugar.</span>
+        </article>
+        <article>
+          <strong>Paginas futuras</strong>
+          <span>Cada colaborador pode ganhar sua propria tela/site.</span>
+        </article>
+        <article>
+          <strong>Pronto para Cloudflare</strong>
+          <span>Arquivos estaticos, rapidos e simples de publicar.</span>
+        </article>
+      </section>
+
+      <section class="section" id="colaboradores">
+        <div class="section-heading">
+          <p class="eyebrow">Colaboradores</p>
+          <h2>Telas disponiveis</h2>
+          <p>
+            Estes cards usam imagens temporarias. Depois, substitua pelos arquivos
+            reais e publique novas paginas sem mudar a estrutura do site.
+          </p>
+        </div>
+        <div class="cards-grid" id="collaboratorGrid"></div>
+      </section>
+
+      <section class="promo-band" id="como-funciona">
+        <div>
+          <p class="eyebrow">Modelo de crescimento</p>
+          <h2>Adicione novas telas quando cada colaborador estiver pronto.</h2>
+        </div>
+        <ol class="steps">
+          <li>Coloque a imagem do colaborador em <code>assets/img/</code>.</li>
+          <li>Cadastre o card em <code>assets/js/data.js</code>.</li>
+          <li>Crie a pagina em <code>colaboradores/</code> quando quiser detalhar.</li>
+        </ol>
+      </section>
+
+      <section class="section contact-section" id="contato">
+        <div class="section-heading">
+          <p class="eyebrow">Contato</p>
+          <h2>Fale com a REC NEGOCIOS</h2>
+          <p>
+            O formulario monta uma mensagem para WhatsApp. Troque o numero no
+            arquivo <code>assets/js/data.js</code>.
+          </p>
+        </div>
+        <form class="contact-form" id="mainContactForm">
+          <label>
+            Nome
+            <input name="nome" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            Telefone
+            <input name="telefone" autocomplete="tel" required />
+          </label>
+          <label>
+            Interesse
+            <select name="interesse" required>
+              <option value="">Selecione</option>
+              <option>Quero conhecer a REC</option>
+              <option>Quero cadastrar um colaborador</option>
+              <option>Quero criar uma tela personalizada</option>
+            </select>
+          </label>
+          <button class="button primary" type="submit">Enviar pelo WhatsApp</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>REC NEGOCIOS</strong>
+      <span>&copy; 2026 REC NEGOCIOS. Todos os direitos reservados.</span>
+    </footer>
+
+    <dialog class="lead-dialog" id="leadDialog">
+      <button class="dialog-close" type="button" aria-label="Fechar">&times;</button>
+      <img id="dialogImage" src="assets/img/card-placeholder.svg" alt="" />
+      <div>
+        <p class="eyebrow" id="dialogCategory"></p>
+        <h2 id="dialogTitle"></h2>
+        <p id="dialogDescription"></p>
+        <form id="leadForm" class="lead-form">
+          <input type="hidden" name="collaborator" id="leadCollaborator" />
+          <label>
+            Nome
+            <input name="nome" autocomplete="name" required />
+          </label>
+          <label>
+            Telefone
+            <input name="telefone" autocomplete="tel" required />
+          </label>
+          <label>
+            Mensagem
+            <textarea name="mensagem" rows="3">Quero mais informacoes.</textarea>
+          </label>
+          <button class="button primary" type="submit">Chamar no WhatsApp</button>
+        </form>
+      </div>
+    </dialog>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
