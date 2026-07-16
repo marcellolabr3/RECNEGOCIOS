@@ -108,8 +108,13 @@ code {
 
 .hero-media {
   position: relative;
+  display: grid;
+  place-items: center;
   overflow: hidden;
-  background: #d8d0c3;
+  background:
+    radial-gradient(circle at 50% 35%, rgb(18 82 129 / 70%), transparent 42%),
+    linear-gradient(145deg, #06172b 0%, #092d54 52%, #04111f 100%);
+  padding: clamp(1.5rem, 5vw, 4rem);
 }
 
 .hero-media img {
@@ -117,6 +122,14 @@ code {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.hero-media .hero-logo {
+  width: min(78%, 520px);
+  height: auto;
+  max-height: min(78vh, 620px);
+  object-fit: contain;
+  filter: drop-shadow(0 24px 40px rgb(0 0 0 / 28%));
 }
 
 .hero-content {
@@ -421,6 +434,11 @@ textarea {
     min-height: 360px;
   }
 
+  .hero-media .hero-logo {
+    width: min(72%, 440px);
+    max-height: 320px;
+  }
+
   .cards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -459,5 +477,14 @@ textarea {
   .lead-dialog > img {
     min-height: 230px;
     border-radius: 8px 8px 0 0;
+  }
+
+  .hero-media {
+    min-height: 300px;
+  }
+
+  .hero-media .hero-logo {
+    width: min(76%, 320px);
+    max-height: 260px;
   }
 }
