@@ -9,6 +9,7 @@ O projeto foi pensado para ser hospedado no GitHub e distribuido pelo Cloudflare
 - Criada a pagina principal em `index.html`.
 - Criado layout responsivo inspirado em sites de vitrine/fornecedores.
 - Criada uma area de destaque para a marca REC NEGOCIOS.
+- Adicionado o logo real da REC em `assets/img/logo-rec.png`.
 - Criada uma grade de cards para colaboradores.
 - Criado modal de contato para cada colaborador.
 - Criado formulario principal que monta uma mensagem para WhatsApp.
@@ -22,20 +23,21 @@ O projeto foi pensado para ser hospedado no GitHub e distribuido pelo Cloudflare
 
 ```text
 .
-├── index.html
-├── _headers
-├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   ├── img/
-│   │   ├── card-placeholder.svg
-│   │   ├── favicon.svg
-│   │   └── hero-placeholder.svg
-│   └── js/
-│       ├── data.js
-│       └── main.js
-└── colaboradores/
-    └── rec-consultoria.html
+|-- index.html
+|-- _headers
+|-- assets/
+|   |-- css/
+|   |   `-- styles.css
+|   |-- img/
+|   |   |-- card-placeholder.svg
+|   |   |-- favicon.svg
+|   |   |-- hero-placeholder.svg
+|   |   `-- logo-rec.png
+|   `-- js/
+|       |-- data.js
+|       `-- main.js
+`-- colaboradores/
+    `-- rec-consultoria.html
 ```
 
 ## Como trocar as imagens
@@ -51,7 +53,7 @@ image: "assets/img/minha-imagem.jpg"
 Para a imagem principal da home, troque o caminho em `index.html`:
 
 ```html
-<img src="assets/img/hero-placeholder.svg" alt="" />
+<img src="assets/img/logo-rec.png" alt="" />
 ```
 
 ## Como mudar o WhatsApp
